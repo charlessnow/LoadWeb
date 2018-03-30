@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9Nm-8b-ObP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoadWeb" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0ch-Cd-xOy"/>
+                        <viewControllerLayoutGuide type="bottom" id="C5b-EC-Kzr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="huL-p9-Z0h">
+                                <rect key="frame" x="20" y="174" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhS-TZ-bxC">
+                                <rect key="frame" x="167" y="317" width="40" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Load"/>
+                                <connections>
+                                    <action selector="loadButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i5c-uA-NTE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="huL-p9-Z0h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="KIB-pB-o0F"/>
+                            <constraint firstAttribute="trailing" secondItem="huL-p9-Z0h" secondAttribute="trailing" constant="20" id="PXp-Ru-d4D"/>
+                            <constraint firstItem="huL-p9-Z0h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U8l-yw-5Fq"/>
+                            <constraint firstItem="huL-p9-Z0h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wd1-6C-bdk"/>
+                            <constraint firstItem="UhS-TZ-bxC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bn0-ET-DLA"/>
+                            <constraint firstItem="UhS-TZ-bxC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hNx-dH-kLY"/>
+                            <constraint firstItem="huL-p9-Z0h" firstAttribute="top" secondItem="0ch-Cd-xOy" secondAttribute="bottom" constant="110" id="xtz-V5-HhH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5tr-xU-5Il"/>
+                    <connections>
+                        <outlet property="urlTextFiled" destination="huL-p9-Z0h" id="2qO-5D-rrK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EeM-8B-QpW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Nm-8b-ObP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vUs-mJ-tYe">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JTJ-zZ-psK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAk-3c-NZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-278" y="134"/>
+        </scene>
+    </scenes>
+</document>

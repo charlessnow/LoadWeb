@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadWebViewViewController" customModule="LoadWeb" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDX-NQ-DiK">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="refresh" id="zX2-Vm-P5q">
+                            <connections>
+                                <action selector="refreshButtonClick:" destination="-1" id="Y6Y-1g-EMp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="d0f-nd-iLx"/>
+                        <barButtonItem style="plain" systemItem="stop" id="OrL-rz-DfW">
+                            <connections>
+                                <action selector="stopAction:" destination="-1" id="5Bl-lv-m98"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="r92-F6-mOQ"/>
+                        <barButtonItem style="plain" systemItem="rewind" id="MqH-7H-dpG">
+                            <connections>
+                                <action selector="goBackAction:" destination="-1" id="skU-qK-kCa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="NtB-AU-5Ya"/>
+                        <barButtonItem style="plain" systemItem="fastForward" id="IMk-66-2c1">
+                            <connections>
+                                <action selector="goForwardAction:" destination="-1" id="0O5-3a-vPO"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8QR-Ru-3pv">
+                    <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="FDX-NQ-DiK" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="L9o-zb-QpE"/>
+                <constraint firstItem="FDX-NQ-DiK" firstAttribute="top" secondItem="8QR-Ru-3pv" secondAttribute="bottom" id="WeL-aG-8UW"/>
+                <constraint firstAttribute="trailing" secondItem="8QR-Ru-3pv" secondAttribute="trailing" id="c8l-FV-yYV"/>
+                <constraint firstItem="FDX-NQ-DiK" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="d63-ec-yFX"/>
+                <constraint firstItem="8QR-Ru-3pv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mGd-vn-4ch"/>
+                <constraint firstItem="FDX-NQ-DiK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oKm-Cl-bbx"/>
+                <constraint firstItem="8QR-Ru-3pv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="qUs-qH-zmm"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
