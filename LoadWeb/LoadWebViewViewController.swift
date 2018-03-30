@@ -19,12 +19,13 @@ class LoadWebViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL.init(string: urlString!)
-        let uRLRequest:URLRequest? = URLRequest.init(url: url!)
-        webView.loadRequest(uRLRequest!)
-    
+        if urlString != nil {
+            let url = URL.init(string: urlString!)
+            let request = URLRequest.init(url: url!)
+            webView.loadRequest(request)
+        }
+        
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

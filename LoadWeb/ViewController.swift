@@ -38,7 +38,7 @@ class ViewController: UIViewController {
             return;
         }
         let loadWebViewVC = LoadWebViewViewController()
-        loadWebViewVC.urlString = urlTextFiled.text
+        loadWebViewVC.urlString = urlTextFiled.text!
         navigationController?.pushViewController(loadWebViewVC, animated: true)
     }
     
